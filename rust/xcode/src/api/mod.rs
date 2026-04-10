@@ -1,0 +1,21 @@
+mod abstract_object;
+mod ide_workspace_checks;
+mod pbx_file_reference;
+mod pbx_native_target;
+mod pbx_project;
+mod xc_scheme;
+mod xc_shared_data;
+mod xc_user_data;
+mod xc_workspace;
+mod xcode_project;
+
+pub use abstract_object::AbstractObject;
+pub use ide_workspace_checks::IDEWorkspaceChecksFile;
+pub use pbx_file_reference::PBXFileReference;
+pub use pbx_native_target::PBXNativeTarget;
+pub use pbx_project::PBXProject;
+pub use xc_scheme::{create_buildable_reference, BuildableReference, XCSchemeFile};
+pub use xc_shared_data::XCSharedData;
+pub use xc_user_data::XCUserData;
+pub use xc_workspace::XCWorkspaceFile;
+pub use xcode_project::XcodeProject;

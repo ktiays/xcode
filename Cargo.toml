@@ -1,0 +1,30 @@
+[package]
+name = "xcode"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "High-performance Xcode project file parser and writer"
+repository = "https://github.com/EvanBacon/xcode"
+
+[dependencies]
+anyhow = "1"
+indexmap = { version = "2.8", features = ["serde"] }
+md-5 = "0.10"
+quick-xml = { version = "0.38", features = ["serialize"] }
+plist = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "2"
+tracing = "0.1"
+regex = "1"
+walkdir = "2.5"
+
+[dev-dependencies]
+anyhow = "1"
+tempfile = "3.18"
+serde_json = { version = "1", features = ["preserve_order"] }
+criterion = "0.5"
+
+[[bench]]
+name = "json_parse"
+harness = false

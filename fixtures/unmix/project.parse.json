@@ -1,0 +1,787 @@
+{
+  "archiveVersion": 1,
+  "classes": {},
+  "objectVersion": 77,
+  "objects": {
+    "ED1FD1E82F3F395800B4091C": {
+      "isa": "PBXBuildFile",
+      "productRef": "ED1FD1E72F3F395800B4091C"
+    },
+    "ED4F20CE2F41EA0D006A1CF7": {
+      "isa": "PBXBuildFile",
+      "productRef": "ED4F20CD2F41EA0D006A1CF7"
+    },
+    "ED8329872F42341C00EB1ED4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED8329842F42341C00EB1ED4"
+    },
+    "ED8329882F42341C00EB1ED4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED8329852F42341C00EB1ED4"
+    },
+    "ED8329892F42341C00EB1ED4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED8329862F42341C00EB1ED4"
+    },
+    "ED83298A2F42341C00EB1ED4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED8329842F42341C00EB1ED4"
+    },
+    "ED83298B2F42341C00EB1ED4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED8329852F42341C00EB1ED4"
+    },
+    "ED83298C2F42341C00EB1ED4": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED8329862F42341C00EB1ED4"
+    },
+    "ED84332A2F4A033300D2960F": {
+      "isa": "PBXBuildFile",
+      "productRef": "ED8433292F4A033300D2960F"
+    },
+    "ED8433332F4A03C600D2960F": {
+      "isa": "PBXBuildFile",
+      "productRef": "ED8433322F4A03C600D2960F"
+    },
+    "ED9256E52F4F49F900C8C4AC": {
+      "isa": "PBXBuildFile",
+      "productRef": "ED9256E42F4F49F900C8C4AC"
+    },
+    "ED9256E82F4F4A0D00C8C4AC": {
+      "isa": "PBXBuildFile",
+      "productRef": "ED9256E72F4F4A0D00C8C4AC"
+    },
+    "ED9A10012F424E4B00C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED9A10002F424E4B00C0DE01"
+    },
+    "ED9A10022F424E4B00C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "ED9A10002F424E4B00C0DE01"
+    },
+    "EDECB1AA2F5483A50071577A": {
+      "isa": "PBXBuildFile",
+      "fileRef": "EDECB1A92F5483A50071577A"
+    },
+    "EDECB1AB2F5483A50071577A": {
+      "isa": "PBXBuildFile",
+      "fileRef": "EDECB1A92F5483A50071577A"
+    },
+    "F0A000012F60000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F0A000002F60000100C0DE01"
+    },
+    "F0A000022F60000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F0A000002F60000100C0DE01"
+    },
+    "F0A000042F60000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F0A000032F60000100C0DE01"
+    },
+    "F0A000052F60000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F0A000032F60000100C0DE01"
+    },
+    "F0A000072F60000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F0A000062F60000100C0DE01"
+    },
+    "F0A000082F60000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F0A000062F60000100C0DE01"
+    },
+    "F17000012F70000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F17000002F70000100C0DE01"
+    },
+    "F17000022F70000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F17000002F70000100C0DE01"
+    },
+    "F18000012F70000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F18000002F70000100C0DE01"
+    },
+    "F18000022F70000100C0DE01": {
+      "isa": "PBXBuildFile",
+      "fileRef": "F18000002F70000100C0DE01"
+    },
+    "ED1FD1CD2F3F385700B4091C": {
+      "isa": "PBXFileReference",
+      "explicitFileType": "wrapper.application",
+      "includeInIndex": 0,
+      "path": "Unmix.app",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "ED4F20BE2F41E813006A1CF7": {
+      "isa": "PBXFileReference",
+      "explicitFileType": "wrapper.application",
+      "includeInIndex": 0,
+      "path": "UnmixMac.app",
+      "sourceTree": "BUILT_PRODUCTS_DIR"
+    },
+    "ED8329842F42341C00EB1ED4": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "ISO8601DateFormatter+Presets.swift",
+      "sourceTree": "<group>"
+    },
+    "ED8329852F42341C00EB1ED4": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "JSONDecoder+Presets.swift",
+      "sourceTree": "<group>"
+    },
+    "ED8329862F42341C00EB1ED4": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "JSONEncoder+Presets.swift",
+      "sourceTree": "<group>"
+    },
+    "ED9A10002F424E4B00C0DE01": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "SourceSeparator.swift",
+      "sourceTree": "<group>"
+    },
+    "EDECB1A92F5483A50071577A": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "RFC3986Regex.swift",
+      "sourceTree": "<group>"
+    },
+    "F0A000002F60000100C0DE01": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "QueueCoreModels.swift",
+      "sourceTree": "<group>"
+    },
+    "F0A000032F60000100C0DE01": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "QueueEventBus.swift",
+      "sourceTree": "<group>"
+    },
+    "F0A000062F60000100C0DE01": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "SeparationQueue.swift",
+      "sourceTree": "<group>"
+    },
+    "F17000002F70000100C0DE01": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "ModelResourceBootstrapper.swift",
+      "sourceTree": "<group>"
+    },
+    "F18000002F70000100C0DE01": {
+      "isa": "PBXFileReference",
+      "lastKnownFileType": "sourcecode.swift",
+      "path": "ModelResourceStore.swift",
+      "sourceTree": "<group>"
+    },
+    "ED1FD1DF2F3F385700B4091C": {
+      "isa": "PBXFileSystemSynchronizedBuildFileExceptionSet",
+      "membershipExceptions": [
+        "Info.plist"
+      ],
+      "target": "ED1FD1CC2F3F385700B4091C"
+    },
+    "ED1FD1CF2F3F385700B4091C": {
+      "isa": "PBXFileSystemSynchronizedRootGroup",
+      "exceptions": [
+        "ED1FD1DF2F3F385700B4091C"
+      ],
+      "path": "Unmix",
+      "sourceTree": "<group>"
+    },
+    "ED4F20BF2F41E813006A1CF7": {
+      "isa": "PBXFileSystemSynchronizedRootGroup",
+      "path": "UnmixMac",
+      "sourceTree": "<group>"
+    },
+    "ED1FD1CA2F3F385700B4091C": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": 2147483647,
+      "files": [
+        "ED1FD1E82F3F395800B4091C",
+        "ED9256E52F4F49F900C8C4AC",
+        "ED84332A2F4A033300D2960F",
+        "ED8433332F4A03C600D2960F",
+        "ED9256E82F4F4A0D00C8C4AC"
+      ],
+      "runOnlyForDeploymentPostprocessing": 0
+    },
+    "ED4F20BB2F41E813006A1CF7": {
+      "isa": "PBXFrameworksBuildPhase",
+      "buildActionMask": 2147483647,
+      "files": [
+        "ED4F20CE2F41EA0D006A1CF7"
+      ],
+      "runOnlyForDeploymentPostprocessing": 0
+    },
+    "ED1FD1C42F3F385700B4091C": {
+      "isa": "PBXGroup",
+      "children": [
+        "ED83290F2F42124B00EB1ED4",
+        "ED1FD1CF2F3F385700B4091C",
+        "ED4F20BF2F41E813006A1CF7",
+        "ED4F20CC2F41EA0D006A1CF7",
+        "ED1FD1CE2F3F385700B4091C"
+      ],
+      "sourceTree": "<group>"
+    },
+    "ED1FD1CE2F3F385700B4091C": {
+      "isa": "PBXGroup",
+      "children": [
+        "ED1FD1CD2F3F385700B4091C",
+        "ED4F20BE2F41E813006A1CF7"
+      ],
+      "name": "Products",
+      "sourceTree": "<group>"
+    },
+    "ED4F20CC2F41EA0D006A1CF7": {
+      "isa": "PBXGroup",
+      "children": [],
+      "name": "Frameworks",
+      "sourceTree": "<group>"
+    },
+    "ED83290F2F42124B00EB1ED4": {
+      "isa": "PBXGroup",
+      "children": [
+        "EDECB1A92F5483A50071577A",
+        "ED8329842F42341C00EB1ED4",
+        "ED8329852F42341C00EB1ED4",
+        "ED8329862F42341C00EB1ED4",
+        "F17000002F70000100C0DE01",
+        "F18000002F70000100C0DE01",
+        "ED9A10002F424E4B00C0DE01",
+        "F0A000002F60000100C0DE01",
+        "F0A000032F60000100C0DE01",
+        "F0A000062F60000100C0DE01"
+      ],
+      "path": "UnmixShared",
+      "sourceTree": "<group>"
+    },
+    "ED1FD1CC2F3F385700B4091C": {
+      "isa": "PBXNativeTarget",
+      "buildConfigurationList": "ED1FD1E02F3F385700B4091C",
+      "buildPhases": [
+        "ED1FD1C92F3F385700B4091C",
+        "ED1FD1CA2F3F385700B4091C",
+        "ED1FD1CB2F3F385700B4091C"
+      ],
+      "buildRules": [],
+      "dependencies": [],
+      "fileSystemSynchronizedGroups": [
+        "ED1FD1CF2F3F385700B4091C"
+      ],
+      "name": "Unmix",
+      "packageProductDependencies": [
+        "ED1FD1E72F3F395800B4091C",
+        "ED8433292F4A033300D2960F",
+        "ED8433322F4A03C600D2960F",
+        "ED9256E42F4F49F900C8C4AC",
+        "ED9256E72F4F4A0D00C8C4AC"
+      ],
+      "productName": "Unmix",
+      "productReference": "ED1FD1CD2F3F385700B4091C",
+      "productType": "com.apple.product-type.application"
+    },
+    "ED4F20BD2F41E813006A1CF7": {
+      "isa": "PBXNativeTarget",
+      "buildConfigurationList": "ED4F20CB2F41E813006A1CF7",
+      "buildPhases": [
+        "ED4F20BA2F41E813006A1CF7",
+        "ED4F20BB2F41E813006A1CF7",
+        "ED4F20BC2F41E813006A1CF7"
+      ],
+      "buildRules": [],
+      "dependencies": [],
+      "fileSystemSynchronizedGroups": [
+        "ED4F20BF2F41E813006A1CF7"
+      ],
+      "name": "UnmixMac",
+      "packageProductDependencies": [
+        "ED4F20CD2F41EA0D006A1CF7"
+      ],
+      "productName": "UnmixMac",
+      "productReference": "ED4F20BE2F41E813006A1CF7",
+      "productType": "com.apple.product-type.application"
+    },
+    "ED1FD1C52F3F385700B4091C": {
+      "isa": "PBXProject",
+      "attributes": {
+        "BuildIndependentTargetsInParallel": 1,
+        "LastSwiftUpdateCheck": 2630,
+        "LastUpgradeCheck": 2630,
+        "TargetAttributes": {
+          "ED1FD1CC2F3F385700B4091C": {
+            "CreatedOnToolsVersion": 26.3,
+            "LastSwiftMigration": 2630
+          },
+          "ED4F20BD2F41E813006A1CF7": {
+            "CreatedOnToolsVersion": 26.3
+          }
+        }
+      },
+      "buildConfigurationList": "ED1FD1C82F3F385700B4091C",
+      "developmentRegion": "en",
+      "hasScannedForEncodings": 0,
+      "knownRegions": [
+        "en",
+        "Base",
+        "zh-Hans"
+      ],
+      "mainGroup": "ED1FD1C42F3F385700B4091C",
+      "minimizedProjectReferenceProxies": 1,
+      "packageReferences": [
+        "ED1FD1E62F3F395800B4091C",
+        "ED8433282F4A033300D2960F",
+        "ED8433312F4A03C600D2960F",
+        "ED9256E32F4F49F900C8C4AC",
+        "ED9256E62F4F4A0D00C8C4AC"
+      ],
+      "preferredProjectObjectVersion": 77,
+      "productRefGroup": "ED1FD1CE2F3F385700B4091C",
+      "projectDirPath": "",
+      "projectRoot": "",
+      "targets": [
+        "ED1FD1CC2F3F385700B4091C",
+        "ED4F20BD2F41E813006A1CF7"
+      ]
+    },
+    "ED1FD1CB2F3F385700B4091C": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": 2147483647,
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": 0
+    },
+    "ED4F20BC2F41E813006A1CF7": {
+      "isa": "PBXResourcesBuildPhase",
+      "buildActionMask": 2147483647,
+      "files": [],
+      "runOnlyForDeploymentPostprocessing": 0
+    },
+    "ED1FD1C92F3F385700B4091C": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": 2147483647,
+      "files": [
+        "F0A000012F60000100C0DE01",
+        "F0A000042F60000100C0DE01",
+        "F0A000072F60000100C0DE01",
+        "ED9A10012F424E4B00C0DE01",
+        "ED8329872F42341C00EB1ED4",
+        "ED8329882F42341C00EB1ED4",
+        "ED8329892F42341C00EB1ED4",
+        "F17000012F70000100C0DE01",
+        "F18000022F70000100C0DE01",
+        "EDECB1AA2F5483A50071577A"
+      ],
+      "runOnlyForDeploymentPostprocessing": 0
+    },
+    "ED4F20BA2F41E813006A1CF7": {
+      "isa": "PBXSourcesBuildPhase",
+      "buildActionMask": 2147483647,
+      "files": [
+        "EDECB1AB2F5483A50071577A",
+        "F0A000022F60000100C0DE01",
+        "F0A000052F60000100C0DE01",
+        "F0A000082F60000100C0DE01",
+        "ED83298A2F42341C00EB1ED4",
+        "ED83298B2F42341C00EB1ED4",
+        "ED83298C2F42341C00EB1ED4",
+        "F17000022F70000100C0DE01",
+        "F18000012F70000100C0DE01",
+        "ED9A10022F424E4B00C0DE01"
+      ],
+      "runOnlyForDeploymentPostprocessing": 0
+    },
+    "ED1FD1E12F3F385700B4091C": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "CLANG_ENABLE_MODULES": "YES",
+        "CODE_SIGN_ENTITLEMENTS": "Unmix/Unmix.entitlements",
+        "CODE_SIGN_STYLE": "Automatic",
+        "CURRENT_PROJECT_VERSION": 1,
+        "DEVELOPMENT_TEAM": "V8K4KDZ2JN",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_FILE": "Unmix/Info.plist",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.music",
+        "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",
+        "INFOPLIST_KEY_UILaunchStoryboardName": "LaunchScreen",
+        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
+        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone": "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
+        "IPHONEOS_DEPLOYMENT_TARGET": "18.0",
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/Frameworks"
+        ],
+        "MARKETING_VERSION": "1.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "me.ktiays.Unmix",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
+        "SWIFT_APPROACHABLE_CONCURRENCY": "YES",
+        "SWIFT_DEFAULT_ACTOR_ISOLATION": "MainActor",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_OBJC_BRIDGING_HEADER": "Unmix/Unmix-Bridging-Header.h",
+        "SWIFT_OPTIMIZATION_LEVEL": "-Onone",
+        "SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY": "YES",
+        "SWIFT_VERSION": "5.0",
+        "TARGETED_DEVICE_FAMILY": "1,2"
+      },
+      "name": "Debug"
+    },
+    "ED1FD1E22F3F385700B4091C": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "CLANG_ENABLE_MODULES": "YES",
+        "CODE_SIGN_ENTITLEMENTS": "Unmix/Unmix.entitlements",
+        "CODE_SIGN_STYLE": "Automatic",
+        "CURRENT_PROJECT_VERSION": 1,
+        "DEVELOPMENT_TEAM": "V8K4KDZ2JN",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_FILE": "Unmix/Info.plist",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.music",
+        "INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents": "YES",
+        "INFOPLIST_KEY_UILaunchStoryboardName": "LaunchScreen",
+        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad": "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
+        "INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone": "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight",
+        "IPHONEOS_DEPLOYMENT_TARGET": "18.0",
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/Frameworks"
+        ],
+        "MARKETING_VERSION": "1.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "me.ktiays.Unmix",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
+        "SWIFT_APPROACHABLE_CONCURRENCY": "YES",
+        "SWIFT_DEFAULT_ACTOR_ISOLATION": "MainActor",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_OBJC_BRIDGING_HEADER": "Unmix/Unmix-Bridging-Header.h",
+        "SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY": "YES",
+        "SWIFT_VERSION": "5.0",
+        "TARGETED_DEVICE_FAMILY": "1,2"
+      },
+      "name": "Release"
+    },
+    "ED1FD1E32F3F385700B4091C": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "ALWAYS_SEARCH_USER_PATHS": "NO",
+        "ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS": "YES",
+        "CLANG_ANALYZER_NONNULL": "YES",
+        "CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION": "YES_AGGRESSIVE",
+        "CLANG_CXX_LANGUAGE_STANDARD": "gnu++20",
+        "CLANG_ENABLE_MODULES": "YES",
+        "CLANG_ENABLE_OBJC_ARC": "YES",
+        "CLANG_ENABLE_OBJC_WEAK": "YES",
+        "CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING": "YES",
+        "CLANG_WARN_BOOL_CONVERSION": "YES",
+        "CLANG_WARN_COMMA": "YES",
+        "CLANG_WARN_CONSTANT_CONVERSION": "YES",
+        "CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS": "YES",
+        "CLANG_WARN_DIRECT_OBJC_ISA_USAGE": "YES_ERROR",
+        "CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
+        "CLANG_WARN_EMPTY_BODY": "YES",
+        "CLANG_WARN_ENUM_CONVERSION": "YES",
+        "CLANG_WARN_INFINITE_RECURSION": "YES",
+        "CLANG_WARN_INT_CONVERSION": "YES",
+        "CLANG_WARN_NON_LITERAL_NULL_CONVERSION": "YES",
+        "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF": "YES",
+        "CLANG_WARN_OBJC_LITERAL_CONVERSION": "YES",
+        "CLANG_WARN_OBJC_ROOT_CLASS": "YES_ERROR",
+        "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER": "YES",
+        "CLANG_WARN_RANGE_LOOP_ANALYSIS": "YES",
+        "CLANG_WARN_STRICT_PROTOTYPES": "YES",
+        "CLANG_WARN_SUSPICIOUS_MOVE": "YES",
+        "CLANG_WARN_UNGUARDED_AVAILABILITY": "YES_AGGRESSIVE",
+        "CLANG_WARN_UNREACHABLE_CODE": "YES",
+        "CLANG_WARN__DUPLICATE_METHOD_MATCH": "YES",
+        "COPY_PHASE_STRIP": "NO",
+        "DEBUG_INFORMATION_FORMAT": "dwarf",
+        "DEVELOPMENT_TEAM": "V8K4KDZ2JN",
+        "ENABLE_STRICT_OBJC_MSGSEND": "YES",
+        "ENABLE_TESTABILITY": "YES",
+        "ENABLE_USER_SCRIPT_SANDBOXING": "YES",
+        "GCC_C_LANGUAGE_STANDARD": "gnu17",
+        "GCC_DYNAMIC_NO_PIC": "NO",
+        "GCC_NO_COMMON_BLOCKS": "YES",
+        "GCC_OPTIMIZATION_LEVEL": 0,
+        "GCC_PREPROCESSOR_DEFINITIONS": [
+          "DEBUG=1",
+          "$(inherited)"
+        ],
+        "GCC_WARN_64_TO_32_BIT_CONVERSION": "YES",
+        "GCC_WARN_ABOUT_RETURN_TYPE": "YES_ERROR",
+        "GCC_WARN_UNDECLARED_SELECTOR": "YES",
+        "GCC_WARN_UNINITIALIZED_AUTOS": "YES_AGGRESSIVE",
+        "GCC_WARN_UNUSED_FUNCTION": "YES",
+        "GCC_WARN_UNUSED_VARIABLE": "YES",
+        "IPHONEOS_DEPLOYMENT_TARGET": 26.2,
+        "LOCALIZATION_PREFERS_STRING_CATALOGS": "YES",
+        "MTL_ENABLE_DEBUG_INFO": "INCLUDE_SOURCE",
+        "MTL_FAST_MATH": "YES",
+        "ONLY_ACTIVE_ARCH": "YES",
+        "SDKROOT": "iphoneos",
+        "SWIFT_ACTIVE_COMPILATION_CONDITIONS": "DEBUG $(inherited)",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_OPTIMIZATION_LEVEL": "-Onone"
+      },
+      "name": "Debug"
+    },
+    "ED1FD1E42F3F385700B4091C": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "ALWAYS_SEARCH_USER_PATHS": "NO",
+        "ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS": "YES",
+        "CLANG_ANALYZER_NONNULL": "YES",
+        "CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION": "YES_AGGRESSIVE",
+        "CLANG_CXX_LANGUAGE_STANDARD": "gnu++20",
+        "CLANG_ENABLE_MODULES": "YES",
+        "CLANG_ENABLE_OBJC_ARC": "YES",
+        "CLANG_ENABLE_OBJC_WEAK": "YES",
+        "CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING": "YES",
+        "CLANG_WARN_BOOL_CONVERSION": "YES",
+        "CLANG_WARN_COMMA": "YES",
+        "CLANG_WARN_CONSTANT_CONVERSION": "YES",
+        "CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS": "YES",
+        "CLANG_WARN_DIRECT_OBJC_ISA_USAGE": "YES_ERROR",
+        "CLANG_WARN_DOCUMENTATION_COMMENTS": "YES",
+        "CLANG_WARN_EMPTY_BODY": "YES",
+        "CLANG_WARN_ENUM_CONVERSION": "YES",
+        "CLANG_WARN_INFINITE_RECURSION": "YES",
+        "CLANG_WARN_INT_CONVERSION": "YES",
+        "CLANG_WARN_NON_LITERAL_NULL_CONVERSION": "YES",
+        "CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF": "YES",
+        "CLANG_WARN_OBJC_LITERAL_CONVERSION": "YES",
+        "CLANG_WARN_OBJC_ROOT_CLASS": "YES_ERROR",
+        "CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER": "YES",
+        "CLANG_WARN_RANGE_LOOP_ANALYSIS": "YES",
+        "CLANG_WARN_STRICT_PROTOTYPES": "YES",
+        "CLANG_WARN_SUSPICIOUS_MOVE": "YES",
+        "CLANG_WARN_UNGUARDED_AVAILABILITY": "YES_AGGRESSIVE",
+        "CLANG_WARN_UNREACHABLE_CODE": "YES",
+        "CLANG_WARN__DUPLICATE_METHOD_MATCH": "YES",
+        "COPY_PHASE_STRIP": "NO",
+        "DEBUG_INFORMATION_FORMAT": "dwarf-with-dsym",
+        "DEVELOPMENT_TEAM": "V8K4KDZ2JN",
+        "ENABLE_NS_ASSERTIONS": "NO",
+        "ENABLE_STRICT_OBJC_MSGSEND": "YES",
+        "ENABLE_USER_SCRIPT_SANDBOXING": "YES",
+        "GCC_C_LANGUAGE_STANDARD": "gnu17",
+        "GCC_NO_COMMON_BLOCKS": "YES",
+        "GCC_WARN_64_TO_32_BIT_CONVERSION": "YES",
+        "GCC_WARN_ABOUT_RETURN_TYPE": "YES_ERROR",
+        "GCC_WARN_UNDECLARED_SELECTOR": "YES",
+        "GCC_WARN_UNINITIALIZED_AUTOS": "YES_AGGRESSIVE",
+        "GCC_WARN_UNUSED_FUNCTION": "YES",
+        "GCC_WARN_UNUSED_VARIABLE": "YES",
+        "IPHONEOS_DEPLOYMENT_TARGET": 26.2,
+        "LOCALIZATION_PREFERS_STRING_CATALOGS": "YES",
+        "MTL_ENABLE_DEBUG_INFO": "NO",
+        "MTL_FAST_MATH": "YES",
+        "SDKROOT": "iphoneos",
+        "SWIFT_COMPILATION_MODE": "wholemodule",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "VALIDATE_PRODUCT": "YES"
+      },
+      "name": "Release"
+    },
+    "ED4F20C92F41E813006A1CF7": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "CODE_SIGN_ENTITLEMENTS": "UnmixMac/UnmixMac.entitlements",
+        "CODE_SIGN_STYLE": "Automatic",
+        "COMBINE_HIDPI_IMAGES": "YES",
+        "CURRENT_PROJECT_VERSION": 1,
+        "DEVELOPMENT_TEAM": "V8K4KDZ2JN",
+        "ENABLE_APP_SANDBOX": "YES",
+        "ENABLE_HARDENED_RUNTIME": "YES",
+        "ENABLE_INCOMING_NETWORK_CONNECTIONS": "YES",
+        "ENABLE_OUTGOING_NETWORK_CONNECTIONS": "YES",
+        "ENABLE_RESOURCE_ACCESS_AUDIO_INPUT": "NO",
+        "ENABLE_RESOURCE_ACCESS_BLUETOOTH": "NO",
+        "ENABLE_RESOURCE_ACCESS_CALENDARS": "NO",
+        "ENABLE_RESOURCE_ACCESS_CAMERA": "NO",
+        "ENABLE_RESOURCE_ACCESS_CONTACTS": "NO",
+        "ENABLE_RESOURCE_ACCESS_LOCATION": "NO",
+        "ENABLE_RESOURCE_ACCESS_PRINTING": "NO",
+        "ENABLE_RESOURCE_ACCESS_USB": "NO",
+        "ENABLE_USER_SELECTED_FILES": "readwrite",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_KEY_CFBundleDisplayName": "Unmix",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.music",
+        "INFOPLIST_KEY_NSHumanReadableCopyright": "",
+        "INFOPLIST_KEY_NSMainStoryboardFile": "Main",
+        "INFOPLIST_KEY_NSPrincipalClass": "NSApplication",
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/../Frameworks"
+        ],
+        "MACOSX_DEPLOYMENT_TARGET": 15.6,
+        "MARKETING_VERSION": "1.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "me.ktiays.UnmixMac",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "REGISTER_APP_GROUPS": "YES",
+        "SDKROOT": "macosx",
+        "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
+        "SWIFT_APPROACHABLE_CONCURRENCY": "YES",
+        "SWIFT_DEFAULT_ACTOR_ISOLATION": "MainActor",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY": "YES",
+        "SWIFT_VERSION": "5.0"
+      },
+      "name": "Debug"
+    },
+    "ED4F20CA2F41E813006A1CF7": {
+      "isa": "XCBuildConfiguration",
+      "buildSettings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "AppIcon",
+        "ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME": "AccentColor",
+        "CODE_SIGN_ENTITLEMENTS": "UnmixMac/UnmixMac.entitlements",
+        "CODE_SIGN_STYLE": "Automatic",
+        "COMBINE_HIDPI_IMAGES": "YES",
+        "CURRENT_PROJECT_VERSION": 1,
+        "DEVELOPMENT_TEAM": "V8K4KDZ2JN",
+        "ENABLE_APP_SANDBOX": "YES",
+        "ENABLE_HARDENED_RUNTIME": "YES",
+        "ENABLE_INCOMING_NETWORK_CONNECTIONS": "YES",
+        "ENABLE_OUTGOING_NETWORK_CONNECTIONS": "YES",
+        "ENABLE_RESOURCE_ACCESS_AUDIO_INPUT": "NO",
+        "ENABLE_RESOURCE_ACCESS_BLUETOOTH": "NO",
+        "ENABLE_RESOURCE_ACCESS_CALENDARS": "NO",
+        "ENABLE_RESOURCE_ACCESS_CAMERA": "NO",
+        "ENABLE_RESOURCE_ACCESS_CONTACTS": "NO",
+        "ENABLE_RESOURCE_ACCESS_LOCATION": "NO",
+        "ENABLE_RESOURCE_ACCESS_PRINTING": "NO",
+        "ENABLE_RESOURCE_ACCESS_USB": "NO",
+        "ENABLE_USER_SELECTED_FILES": "readwrite",
+        "GENERATE_INFOPLIST_FILE": "YES",
+        "INFOPLIST_KEY_CFBundleDisplayName": "Unmix",
+        "INFOPLIST_KEY_LSApplicationCategoryType": "public.app-category.music",
+        "INFOPLIST_KEY_NSHumanReadableCopyright": "",
+        "INFOPLIST_KEY_NSMainStoryboardFile": "Main",
+        "INFOPLIST_KEY_NSPrincipalClass": "NSApplication",
+        "LD_RUNPATH_SEARCH_PATHS": [
+          "$(inherited)",
+          "@executable_path/../Frameworks"
+        ],
+        "MACOSX_DEPLOYMENT_TARGET": 15.6,
+        "MARKETING_VERSION": "1.0",
+        "PRODUCT_BUNDLE_IDENTIFIER": "me.ktiays.UnmixMac",
+        "PRODUCT_NAME": "$(TARGET_NAME)",
+        "REGISTER_APP_GROUPS": "YES",
+        "SDKROOT": "macosx",
+        "STRING_CATALOG_GENERATE_SYMBOLS": "YES",
+        "SWIFT_APPROACHABLE_CONCURRENCY": "YES",
+        "SWIFT_DEFAULT_ACTOR_ISOLATION": "MainActor",
+        "SWIFT_EMIT_LOC_STRINGS": "YES",
+        "SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY": "YES",
+        "SWIFT_VERSION": "5.0"
+      },
+      "name": "Release"
+    },
+    "ED1FD1C82F3F385700B4091C": {
+      "isa": "XCConfigurationList",
+      "buildConfigurations": [
+        "ED1FD1E32F3F385700B4091C",
+        "ED1FD1E42F3F385700B4091C"
+      ],
+      "defaultConfigurationIsVisible": 0,
+      "defaultConfigurationName": "Release"
+    },
+    "ED1FD1E02F3F385700B4091C": {
+      "isa": "XCConfigurationList",
+      "buildConfigurations": [
+        "ED1FD1E12F3F385700B4091C",
+        "ED1FD1E22F3F385700B4091C"
+      ],
+      "defaultConfigurationIsVisible": 0,
+      "defaultConfigurationName": "Release"
+    },
+    "ED4F20CB2F41E813006A1CF7": {
+      "isa": "XCConfigurationList",
+      "buildConfigurations": [
+        "ED4F20C92F41E813006A1CF7",
+        "ED4F20CA2F41E813006A1CF7"
+      ],
+      "defaultConfigurationIsVisible": 0,
+      "defaultConfigurationName": "Release"
+    },
+    "ED1FD1E62F3F395800B4091C": {
+      "isa": "XCLocalSwiftPackageReference",
+      "relativePath": "../SourceSeparationKit"
+    },
+    "ED8433282F4A033300D2960F": {
+      "isa": "XCRemoteSwiftPackageReference",
+      "repositoryURL": "https://github.com/apple/swift-collections.git",
+      "requirement": {
+        "kind": "upToNextMajorVersion",
+        "minimumVersion": "1.3.0"
+      }
+    },
+    "ED8433312F4A03C600D2960F": {
+      "isa": "XCRemoteSwiftPackageReference",
+      "repositoryURL": "https://github.com/Helixform/SwiftyRuntime.git",
+      "requirement": {
+        "kind": "upToNextMajorVersion",
+        "minimumVersion": "1.0.0"
+      }
+    },
+    "ED9256E32F4F49F900C8C4AC": {
+      "isa": "XCRemoteSwiftPackageReference",
+      "repositoryURL": "https://github.com/ktiays/QuartzFilters",
+      "requirement": {
+        "kind": "upToNextMajorVersion",
+        "minimumVersion": "1.0.0"
+      }
+    },
+    "ED9256E62F4F4A0D00C8C4AC": {
+      "isa": "XCRemoteSwiftPackageReference",
+      "repositoryURL": "https://github.com/ktiays/With",
+      "requirement": {
+        "kind": "upToNextMajorVersion",
+        "minimumVersion": "2.1.1"
+      }
+    },
+    "ED1FD1E72F3F395800B4091C": {
+      "isa": "XCSwiftPackageProductDependency",
+      "productName": "SourceSeparationKit"
+    },
+    "ED4F20CD2F41EA0D006A1CF7": {
+      "isa": "XCSwiftPackageProductDependency",
+      "package": "ED1FD1E62F3F395800B4091C",
+      "productName": "SourceSeparationKit"
+    },
+    "ED8433292F4A033300D2960F": {
+      "isa": "XCSwiftPackageProductDependency",
+      "package": "ED8433282F4A033300D2960F",
+      "productName": "DequeModule"
+    },
+    "ED8433322F4A03C600D2960F": {
+      "isa": "XCSwiftPackageProductDependency",
+      "package": "ED8433312F4A03C600D2960F",
+      "productName": "SwiftyRuntime"
+    },
+    "ED9256E42F4F49F900C8C4AC": {
+      "isa": "XCSwiftPackageProductDependency",
+      "package": "ED9256E32F4F49F900C8C4AC",
+      "productName": "QuartzFilters"
+    },
+    "ED9256E72F4F4A0D00C8C4AC": {
+      "isa": "XCSwiftPackageProductDependency",
+      "package": "ED9256E62F4F4A0D00C8C4AC",
+      "productName": "With"
+    }
+  },
+  "rootObject": "ED1FD1C52F3F385700B4091C"
+}

@@ -1,0 +1,77 @@
+{
+  "version": "1.7",
+  "lastUpgradeVersion": "2640",
+  "buildAction": {
+    "parallelizeBuildables": true,
+    "buildImplicitDependencies": true,
+    "buildArchitectures": "Automatic",
+    "entries": [
+      {
+        "buildForRunning": true,
+        "buildForTesting": true,
+        "buildForProfiling": true,
+        "buildForArchiving": true,
+        "buildForAnalyzing": true,
+        "buildableReference": {
+          "buildableIdentifier": "primary",
+          "blueprintIdentifier": "ED4F20BD2F41E813006A1CF7",
+          "buildableName": "UnmixMac.app",
+          "blueprintName": "UnmixMac",
+          "referencedContainer": "container:Unmix.xcodeproj"
+        }
+      }
+    ]
+  },
+  "testAction": {
+    "buildConfiguration": "Debug",
+    "selectedDebuggerIdentifier": "Xcode.DebuggerFoundation.Debugger.LLDB",
+    "selectedLauncherIdentifier": "Xcode.DebuggerFoundation.Launcher.LLDB",
+    "shouldUseLaunchSchemeArgsEnv": true,
+    "shouldAutocreateTestPlan": true
+  },
+  "launchAction": {
+    "buildConfiguration": "Debug",
+    "selectedDebuggerIdentifier": "Xcode.DebuggerFoundation.Debugger.LLDB",
+    "selectedLauncherIdentifier": "Xcode.DebuggerFoundation.Launcher.LLDB",
+    "launchStyle": "0",
+    "useCustomWorkingDirectory": false,
+    "ignoresPersistentStateOnLaunch": false,
+    "debugDocumentVersioning": true,
+    "debugServiceExtension": "internal",
+    "allowLocationSimulation": true,
+    "buildableProductRunnable": {
+      "runnableDebuggingMode": "0",
+      "buildableReference": {
+        "buildableIdentifier": "primary",
+        "blueprintIdentifier": "ED4F20BD2F41E813006A1CF7",
+        "buildableName": "UnmixMac.app",
+        "blueprintName": "UnmixMac",
+        "referencedContainer": "container:Unmix.xcodeproj"
+      }
+    }
+  },
+  "profileAction": {
+    "buildConfiguration": "Release",
+    "shouldUseLaunchSchemeArgsEnv": true,
+    "savedToolIdentifier": "",
+    "useCustomWorkingDirectory": false,
+    "debugDocumentVersioning": true,
+    "buildableProductRunnable": {
+      "runnableDebuggingMode": "0",
+      "buildableReference": {
+        "buildableIdentifier": "primary",
+        "blueprintIdentifier": "ED4F20BD2F41E813006A1CF7",
+        "buildableName": "UnmixMac.app",
+        "blueprintName": "UnmixMac",
+        "referencedContainer": "container:Unmix.xcodeproj"
+      }
+    }
+  },
+  "analyzeAction": {
+    "buildConfiguration": "Debug"
+  },
+  "archiveAction": {
+    "buildConfiguration": "Release",
+    "revealArchiveInOrganizer": true
+  }
+}

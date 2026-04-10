@@ -1,4 +1,5 @@
 mod abstract_object;
+mod data_helpers;
 mod ide_workspace_checks;
 mod pbx_file_reference;
 mod pbx_native_target;

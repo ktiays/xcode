@@ -107,15 +107,7 @@ impl<'a> JsonWriter<'a> {
 
     fn write_object(&mut self, object: &Map<String, Value>, is_base: bool) {
         let mut keys: Vec<&String> = object.keys().collect();
-        keys.sort_by(|a, b| {
-            if a.as_str() == "isa" {
-                std::cmp::Ordering::Less
-            } else if b.as_str() == "isa" {
-                std::cmp::Ordering::Greater
-            } else {
-                a.cmp(b)
-            }
-        });
+        keys.sort_by(|a, b| sort_isa_first(a, b));
 
         for key in keys {
             let value = &object[key];
@@ -254,29 +246,22 @@ impl<'a> JsonWriter<'a> {
     }
 
     fn write_object_without_indent(&mut self, key: &str, value: &Value) {
-        let mut line = Vec::<String>::new();
+        let mut line = String::new();
         self.build_inline(&mut line, key, value);
-        self.println(line.join("").trim());
+        self.println(line.trim());
     }
 
-    fn build_inline(&self, line: &mut Vec<String>, key: &str, value: &Value) {
-        line.push(format!("{} = {{", self.format_id(key)));
+    fn build_inline(&self, line: &mut String, key: &str, value: &Value) {
+        use std::fmt::Write;
+        let _ = write!(line, "{} = {{", self.format_id(key));
 
         let Some(object) = value.as_object() else {
-            line.push("}; ".to_string());
+            line.push_str("}; ");
             return;
         };
 
         let mut keys: Vec<&String> = object.keys().collect();
-        keys.sort_by(|a, b| {
-            if a.as_str() == "isa" {
-                std::cmp::Ordering::Less
-            } else if b.as_str() == "isa" {
-                std::cmp::Ordering::Greater
-            } else {
-                a.cmp(b)
-            }
-        });
+        keys.sort_by(|a, b| sort_isa_first(a, b));
 
         for key in keys {
             let obj = &object[key];
@@ -285,29 +270,34 @@ impl<'a> JsonWriter<'a> {
             }
 
             if let Some(buffer) = value_to_buffer(obj) {
-                line.push(format!(
-                    "{} = {}; ",
-                    ensure_quotes(key),
-                    format_data(&buffer)
-                ));
+                let _ = write!(line, "{} = {}; ", ensure_quotes(key), format_data(&buffer));
             } else if let Some(array) = obj.as_array() {
-                line.push(format!("{} = (", ensure_quotes(key)));
+                let _ = write!(line, "{} = (", ensure_quotes(key));
                 for item in array {
-                    line.push(format!("{}, ", ensure_quotes(&scalar_to_string(item))));
+                    let _ = write!(line, "{}, ", ensure_quotes(&scalar_to_string(item)));
                 }
-                line.push("); ".to_string());
+                line.push_str("); ");
             } else if obj.is_object() {
                 self.build_inline(line, key, obj);
             } else {
-                line.push(format!(
+                let _ = write!(
+                    line,
                     "{} = {}; ",
                     ensure_quotes(key),
                     self.format_id(&scalar_to_string(obj))
-                ));
+                );
             }
         }
 
-        line.push("}; ".to_string());
+        line.push_str("}; ");
+    }
+}
+
+fn sort_isa_first(a: &str, b: &str) -> std::cmp::Ordering {
+    match (a == "isa", b == "isa") {
+        (true, false) => std::cmp::Ordering::Less,
+        (false, true) => std::cmp::Ordering::Greater,
+        _ => a.cmp(b),
     }
 }
 
@@ -316,11 +306,14 @@ pub fn build(project: &Value) -> String {
 }
 
 fn format_data(data: &[u8]) -> String {
-    let hex = data
-        .iter()
-        .map(|b| format!("{:02X}", b))
-        .collect::<String>();
-    format!("<{}>", hex)
+    use std::fmt::Write;
+    let mut out = String::with_capacity(2 + data.len() * 2);
+    out.push('<');
+    for b in data {
+        let _ = write!(out, "{:02X}", b);
+    }
+    out.push('>');
+    out
 }
 
 fn scalar_to_string(value: &Value) -> String {

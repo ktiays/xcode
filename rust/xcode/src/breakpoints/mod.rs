@@ -803,11 +803,7 @@ fn parse_bool(value: Option<&str>) -> Option<bool> {
 }
 
 fn escape_xml_owned(value: &str) -> String {
-    value
-        .replace('&', "&amp;")
-        .replace('<', "&lt;")
-        .replace('>', "&gt;")
-        .replace('"', "&quot;")
+    crate::util::escape_xml(value)
 }
 
 fn indent(depth: usize) -> String {

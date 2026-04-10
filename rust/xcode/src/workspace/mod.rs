@@ -201,11 +201,7 @@ fn build_group(group: &Group, depth: usize) -> Vec<String> {
 }
 
 fn escape_xml(value: &str) -> String {
-    value
-        .replace('&', "&amp;")
-        .replace('<', "&lt;")
-        .replace('>', "&gt;")
-        .replace('"', "&quot;")
+    crate::util::escape_xml(value)
 }
 
 pub type IDEWorkspaceChecks = HashMap<String, bool>;

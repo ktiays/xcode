@@ -139,7 +139,7 @@ impl XcodeProject {
         self.objects.values()
     }
 
-    pub fn create_model(&mut self, mut props: Value) -> anyhow::Result<AbstractObject> {
+    pub fn create_model(&mut self, props: Value) -> anyhow::Result<AbstractObject> {
         let isa = props
             .get("isa")
             .and_then(Value::as_str)
@@ -161,7 +161,6 @@ impl XcodeProject {
             counter += 1;
         };
 
-        normalize_references(&mut props);
         let object = AbstractObject::new(uuid.clone(), isa, props);
         self.objects.insert(uuid, object.clone());
         Ok(object)
@@ -208,10 +207,6 @@ fn canonicalize(value: &Value) -> Value {
         }
         _ => value.clone(),
     }
-}
-
-fn normalize_references(_value: &mut Value) {
-    // Reserved extension point for future strict UUID/reference normalization parity.
 }
 
 fn remove_reference(value: &mut Value, uuid: &str) {

@@ -1,9 +1,19 @@
 use std::collections::HashSet;
 use std::fs;
 use std::path::{Path, PathBuf};
+use std::sync::LazyLock;
 
 use regex::Regex;
 use serde::{Deserialize, Serialize};
+
+static INCLUDE_RE: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r#"^#include(\?)?\s+\"(.+)\"$"#).unwrap());
+static SETTING_RE: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r"^([a-zA-Z_][a-zA-Z0-9_]*(?:\[[^\]]+\])*)\s*=\s*(.*)$").unwrap());
+static CONDITION_RE: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r"\[([a-zA-Z]+)=([^\]]+)\]").unwrap());
+static COMMENT_RE: LazyLock<Regex> =
+    LazyLock::new(|| Regex::new(r"//.*").unwrap());
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize, Default)]
 #[serde(rename_all = "camelCase")]
@@ -57,22 +67,16 @@ pub struct XCConfigFlattenOptions {
 }
 
 pub fn parse(content: &str) -> XCConfig {
-    let include_regex = Regex::new(r#"^#include(\?)?\s+\"(.+)\"$"#).expect("valid regex");
-    let setting_regex =
-        Regex::new(r"^([a-zA-Z_][a-zA-Z0-9_]*(?:\[[^\]]+\])*)\s*=\s*(.*)$").expect("valid regex");
-    let condition_regex = Regex::new(r"\[([a-zA-Z]+)=([^\]]+)\]").expect("valid regex");
-    let comment_regex = Regex::new(r"//.*").expect("valid regex");
-
     let mut includes = Vec::new();
     let mut build_settings = Vec::new();
 
     for raw_line in content.lines() {
-        let line = comment_regex.replace(raw_line, "").trim().to_string();
+        let line = COMMENT_RE.replace(raw_line, "").trim().to_string();
         if line.is_empty() {
             continue;
         }
 
-        if let Some(caps) = include_regex.captures(&line) {
+        if let Some(caps) = INCLUDE_RE.captures(&line) {
             let optional = caps.get(1).is_some();
             let include_path = caps.get(2).map(|m| m.as_str()).unwrap_or("");
             includes.push(XCConfigIncludeResolved {
@@ -86,14 +90,14 @@ pub fn parse(content: &str) -> XCConfig {
             continue;
         }
 
-        if let Some(caps) = setting_regex.captures(&line) {
+        if let Some(caps) = SETTING_RE.captures(&line) {
             let key_with_conditions = caps.get(1).map(|m| m.as_str()).unwrap_or_default();
             let value = caps
                 .get(2)
                 .map(|m| m.as_str().trim().to_string())
                 .unwrap_or_default();
-            let conditions = parse_conditions(key_with_conditions, &condition_regex);
-            let key = condition_regex
+            let conditions = parse_conditions(key_with_conditions);
+            let key = CONDITION_RE
                 .replace_all(key_with_conditions, "")
                 .to_string();
 
@@ -115,10 +119,10 @@ pub fn parse(content: &str) -> XCConfig {
     }
 }
 
-fn parse_conditions(key_with_conditions: &str, condition_regex: &Regex) -> Vec<XCConfigCondition> {
+fn parse_conditions(key_with_conditions: &str) -> Vec<XCConfigCondition> {
     let mut conditions = Vec::new();
 
-    for caps in condition_regex.captures_iter(key_with_conditions) {
+    for caps in CONDITION_RE.captures_iter(key_with_conditions) {
         let condition_type = caps
             .get(1)
             .map(|m| m.as_str().to_lowercase())
@@ -303,14 +307,12 @@ fn resolve_inherited(
     key: &str,
     existing_settings: &std::collections::HashMap<String, String>,
 ) -> String {
-    let inherited_regex = Regex::new(r"\$\(inherited\)").expect("valid regex");
-
-    if !inherited_regex.is_match(value) {
+    if !value.contains("$(inherited)") {
         return value.to_string();
     }
 
-    let existing = existing_settings.get(key).cloned().unwrap_or_default();
-    inherited_regex.replace_all(value, existing).to_string()
+    let existing = existing_settings.get(key).map(|s| s.as_str()).unwrap_or_default();
+    value.replace("$(inherited)", existing)
 }
 
 #[cfg(test)]

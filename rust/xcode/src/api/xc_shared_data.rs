@@ -3,6 +3,7 @@ use std::path::{Path, PathBuf};
 
 use crate::{breakpoints, scheme, settings};
 
+use super::data_helpers::{self, require_path};
 use super::XCSchemeFile;
 
 #[derive(Debug, Clone)]
@@ -25,138 +26,56 @@ impl XCSharedData {
         })
     }
 
+    fn base(&self) -> anyhow::Result<&Path> {
+        require_path(&self.file_path, "XCSharedData")
+    }
+
     pub fn list_schemes(&self) -> anyhow::Result<Vec<XCSchemeFile>> {
-        let dir = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcschemes"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
-        if !dir.exists() {
-            return Ok(Vec::new());
-        }
-
-        let mut schemes = Vec::new();
-        for entry in fs::read_dir(&dir)? {
-            let entry = entry?;
-            let path = entry.path();
-            if path.extension().and_then(|s| s.to_str()) == Some("xcscheme") {
-                if let Ok(scheme) = XCSchemeFile::open(&path) {
-                    schemes.push(scheme);
-                }
-            }
-        }
-
-        schemes.sort_by(|a, b| a.file_path.cmp(&b.file_path));
-        Ok(schemes)
+        data_helpers::list_schemes(self.base()?)
     }
 
     pub fn get_scheme(&self, name: &str) -> anyhow::Result<Option<XCSchemeFile>> {
-        let path = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcschemes").join(format!("{}.xcscheme", name)))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
+        let path = self.base()?.join("xcschemes").join(format!("{}.xcscheme", name));
         if !path.exists() {
             return Ok(None);
         }
-
         Ok(Some(XCSchemeFile::open(path)?))
     }
 
     pub fn save_scheme(&self, name: &str, scheme_file: &XCSchemeFile) -> anyhow::Result<()> {
-        let dir = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcschemes"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-        fs::create_dir_all(&dir)?;
-        scheme_file.save(Some(dir.join(format!("{}.xcscheme", name))))
+        data_helpers::save_scheme(self.base()?, name, scheme_file)
     }
 
     pub fn load_scheme_management(&self) -> anyhow::Result<Option<scheme::XCSchemeManagement>> {
-        let path = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcschemes").join("xcschememanagement.plist"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
-        if !path.exists() {
-            return Ok(None);
-        }
-
-        let plist = fs::read_to_string(path)?;
-        Ok(Some(scheme::parse_management(&plist)?))
+        data_helpers::load_scheme_management(self.base()?)
     }
 
     pub fn save_scheme_management(
         &self,
         management: &scheme::XCSchemeManagement,
     ) -> anyhow::Result<()> {
-        let dir = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcschemes"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-        fs::create_dir_all(&dir)?;
-
-        let plist = scheme::build_management(management)?;
-        fs::write(dir.join("xcschememanagement.plist"), plist)?;
-        Ok(())
+        data_helpers::save_scheme_management(self.base()?, management)
     }
 
     pub fn load_breakpoints(&self) -> anyhow::Result<Option<breakpoints::XCBreakpointList>> {
-        let path = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcdebugger").join("Breakpoints_v2.xcbkptlist"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
-        if !path.exists() {
-            return Ok(None);
-        }
-
-        let xml = fs::read_to_string(path)?;
-        Ok(Some(breakpoints::parse(&xml)?))
+        data_helpers::load_breakpoints(self.base()?)
     }
 
     pub fn save_breakpoints(&self, list: &breakpoints::XCBreakpointList) -> anyhow::Result<()> {
-        let dir = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("xcdebugger"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
-        fs::create_dir_all(&dir)?;
-        fs::write(
-            dir.join("Breakpoints_v2.xcbkptlist"),
-            breakpoints::build(list),
-        )?;
-        Ok(())
+        data_helpers::save_breakpoints(self.base()?, list)
     }
 
     pub fn load_workspace_settings(&self) -> anyhow::Result<Option<settings::WorkspaceSettings>> {
-        let path = self
-            .file_path
-            .as_ref()
-            .map(|p| p.join("WorkspaceSettings.xcsettings"))
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
+        let path = self.base()?.join("WorkspaceSettings.xcsettings");
         if !path.exists() {
             return Ok(None);
         }
-
         let plist = fs::read_to_string(path)?;
         Ok(Some(settings::parse(&plist)?))
     }
 
     pub fn save_workspace_settings(&self, ws: &settings::WorkspaceSettings) -> anyhow::Result<()> {
-        let base = self
-            .file_path
-            .as_ref()
-            .ok_or_else(|| anyhow::anyhow!("No file path set for XCSharedData"))?;
-
+        let base = self.base()?;
         fs::create_dir_all(base)?;
         fs::write(
             base.join("WorkspaceSettings.xcsettings"),

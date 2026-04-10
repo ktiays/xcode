@@ -34,18 +34,10 @@ pub fn value_to_buffer(value: &Value) -> Option<Vec<u8>> {
     Some(out)
 }
 
-pub fn value_as_object(value: &Value) -> Option<&Map<String, Value>> {
-    value.as_object()
-}
-
-pub fn value_as_object_mut(value: &mut Value) -> Option<&mut Map<String, Value>> {
-    value.as_object_mut()
-}
-
-pub fn new_object() -> Value {
-    Value::Object(Map::new())
-}
-
-pub fn new_array() -> Value {
-    Value::Array(Vec::new())
+pub fn escape_xml(value: &str) -> String {
+    value
+        .replace('&', "&amp;")
+        .replace('<', "&lt;")
+        .replace('>', "&gt;")
+        .replace('"', "&quot;")
 }

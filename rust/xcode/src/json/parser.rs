@@ -299,7 +299,7 @@ impl<'a> JsonParser<'a> {
             let code = self.bytes[self.pos];
             if code == CHAR_GREATER_THAN {
                 self.pos += 1;
-                if hex.len() % 2 != 0 {
+                if !hex.len().is_multiple_of(2) {
                     return Err(
                         self.error("Data literal must contain an even number of hex digits")
                     );
